@@ -36,7 +36,7 @@ services:
     depends_on:
       - main-db
     environment:
-      - MY_SERVER_URL=http://stat-server:9090
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://main-db:5432/main-service
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=12345
       - MY_SERVER_URL=http://stat-server:9090
