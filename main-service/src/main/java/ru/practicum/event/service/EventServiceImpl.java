@@ -34,7 +34,7 @@ import ru.practicum.request.dto.ParticipationRequestDto;
 import ru.practicum.request.dto.mapper.RequestMapper;
 import ru.practicum.request.model.Request;
 import ru.practicum.request.model.RequestState;
-import ru.practicum.request.repositroy.RequestRepository;
+import ru.practicum.request.repository.RequestRepository;
 import ru.practicum.user.model.User;
 import ru.practicum.user.service.UserService;
 
