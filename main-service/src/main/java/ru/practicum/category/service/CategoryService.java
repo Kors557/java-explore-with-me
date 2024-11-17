@@ -5,9 +5,7 @@ import ru.practicum.category.model.Category;
 import java.util.List;
 
 public interface CategoryService {
-    Category createCategory(Category category);
-
-    Category updateCategory(Category category);
+    Category saveCategory(Category category);
 
     void deleteCategory(long catId);
 

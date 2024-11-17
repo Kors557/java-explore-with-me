@@ -21,18 +21,10 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     @Override
-    public Category createCategory(Category category) {
+    public Category saveCategory(Category category) {
         log.info("Create category: {}", category);
         Category result = categoryRepository.save(category);
         log.info("Category created: {}", result);
-        return result;
-    }
-
-    @Override
-    public Category updateCategory(Category category) {
-        log.info("Update category: {}", category);
-        Category result = categoryRepository.save(category);
-        log.info("Category updated: {}", result);
         return result;
     }
 
