@@ -29,10 +29,10 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void deleteCategory(long catId) {
-        log.info("Delete category: {}", catId);
-        categoryRepository.deleteById(catId);
-        log.info("Category deleted: {}", catId);
+    public void deleteCategory(long categoryId) {
+        log.info("Delete category: {}", categoryId);
+        categoryRepository.deleteById(categoryId);
+        log.info("Category deleted: {}", categoryId);
     }
 
     @Override
@@ -44,11 +44,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     @Transactional(readOnly = true)
-    public Category getCategoryById(long catId) {
-        return categoryRepository.findById(catId)
+    public Category getCategoryById(long categoryId) {
+        return categoryRepository.findById(categoryId)
                 .orElseThrow(() -> {
-                    log.warn("Category with id {} not found", catId);
-                    return new EntityNotFoundException("Category with id " + catId + " not found");
+                    log.warn("Category with id {} not found", categoryId);
+                    return new EntityNotFoundException("Category with id " + categoryId + " not found");
                 });
     }
 

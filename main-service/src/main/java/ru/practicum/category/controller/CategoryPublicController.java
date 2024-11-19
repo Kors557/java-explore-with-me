@@ -26,8 +26,8 @@ public class CategoryPublicController {
                 .map(mapper::toCategoryDto).toList();
     }
 
-    @GetMapping("/{catId}")
-    public CategoryDto getCategoryById(@PathVariable long catId) {
-        return mapper.toCategoryDto(categoryService.getCategoryById(catId));
+    @GetMapping("/{categoryId}")
+    public CategoryDto getCategoryById(@PathVariable long categoryId) {
+        return mapper.toCategoryDto(categoryService.getCategoryById(categoryId));
     }
 }
