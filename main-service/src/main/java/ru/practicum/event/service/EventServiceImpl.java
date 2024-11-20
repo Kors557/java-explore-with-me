@@ -54,7 +54,6 @@ import static ru.practicum.event.model.QEvent.event;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-@Transactional
 public class EventServiceImpl implements EventService {
     private final EventRepository eventRepository;
     private final LocationRepository locationRepository;

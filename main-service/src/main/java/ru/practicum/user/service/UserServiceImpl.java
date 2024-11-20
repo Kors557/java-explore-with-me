@@ -76,7 +76,7 @@ public class UserServiceImpl implements UserService {
 
     private void settingUsersRating(List<User> users) {
         List<Long> userIds = users.stream().map(User::getId).toList();
-        Map<Long, List<EventLike>> mapUserLikes = likeRepository.findLikes(userIds).stream()
+        Map<Long, List<EventLike>> mapUserLikes = likeRepository.findRatingByUserIds(userIds).stream()
                 .collect(Collectors.groupingBy(
                         RatingDto::getUserId,
                         Collectors.mapping(
