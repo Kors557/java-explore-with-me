@@ -7,9 +7,9 @@ import java.util.List;
 public interface CategoryService {
     Category saveCategory(Category category);
 
-    void deleteCategory(long catId);
+    void deleteCategory(long categoryId);
 
     List<Category> getCategoriesWithPagination(int from, int size);
 
-    Category getCategoryById(long catId);
+    Category getCategoryById(long categoryId);
 }
